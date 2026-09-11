@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Reports - Campus Pick</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">Campus Pick</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="report-lost.html">Report Lost</a>
+            <a href="report-found.html">Report Found</a>
+            <a href="dashboard.html">Dashboard</a>
+            <button type="button" onclick="logout()">Logout</button>
+        </nav>
+    </header>
+
+    <main class="dashboard">
+
+        <section class="dashboard-header">
+            <p class="tagline">Campus Pick</p>
+            <h1>My Reports</h1>
+            <p>Track the items you have reported.</p>
+        </section>
+
+        <section>
+            <div id="my-reports-container" class="reports-grid">
+                <!-- JavaScript will insert reports here -->
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Campus Pick</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

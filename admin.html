@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Campus Pick</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">Campus Pick</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="my-reports.html">My Reports</a>
+        <button type="button" onclick="logout()">Logout</button>
+    </nav>
+
+</header>
+
+<main class="dashboard">
+
+    <section class="dashboard-header">
+        <p class="tagline">Campus Pick</p>
+        <h1>Admin Dashboard</h1>
+        <p>Manage campus lost and found reports.</p>
+    </section>
+
+    <section class="admin-stats">
+
+        <article class="admin-stat-card">
+            <h3 id="total-reports">0</h3>
+            <p>Total Reports</p>
+        </article>
+
+        <article class="admin-stat-card">
+            <h3 id="lost-count">0</h3>
+            <p>Lost Items</p>
+        </article>
+
+        <article class="admin-stat-card">
+            <h3 id="found-count">0</h3>
+            <p>Found Items</p>
+        </article>
+
+        <article class="admin-stat-card">
+            <h3 id="returned-count">0</h3>
+            <p>Returned Items</p>
+        </article>
+
+    </section>
+
+    <section class="admin-reports">
+
+        <h2>Manage Reports</h2>
+
+        <div id="admin-reports-container" class="reports-grid">
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Campus Pick</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

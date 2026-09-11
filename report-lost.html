@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Lost Item - Campus Pick</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">Campus Pick</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="report-found.html">Report Found</a>
+             <a href="dashboard.html" id="dashboard-link">Dashboard</a>
+            <a href="my-reports.html" id="my-reports-link">My Reports</a>
+            <button type="button" onclick="logout()">Logout</button>
+        </nav>
+    </header>
+
+    <main class="form-page">
+
+        <section class="form-container">
+
+            <div class="form-heading">
+                <p class="tagline">Campus Pick</p>
+                <h1>Report a Lost Item</h1>
+                <p>Provide the details below so your item can be found.</p>
+            </div>
+
+            <form id="lost-form">
+
+                <div class="form-group">
+                    <label for="item-name">Item Name</label>
+                    <input type="text" id="item-name" placeholder="e.g. Black Wallet">
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select id="category">
+                        <option value="">Select a category</option>
+                        <option>Electronics</option>
+                        <option>Documents</option>
+                        <option>Accessories</option>
+                        <option>Books</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="color">Color</label>
+                    <input type="text" id="color" placeholder="e.g. Black, Blue, Red">
+                </div>
+
+                <div class="form-group">
+                    <label for="brand">Brand</label>
+                    <input type="text" id="brand" placeholder="e.g. Samsung, Nike, Dell">
+                </div>
+
+                <div class="form-group">
+                    <label for="location">Location Lost</label>
+                    <input type="text" id="location" placeholder="e.g. Library">
+                </div>
+
+                <div class="form-group">
+                    <label for="date-lost">Date Lost</label>
+                    <input type="date" id="date-lost">
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" rows="4"
+                        placeholder="Describe the item..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="image">Upload Image</label>
+                    <input type="file" id="image">
+                </div>
+
+                <button type="submit">Submit Lost Report</button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Campus Pick</p>
+    </footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Campus Pick</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">Campus Pick</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="report-lost.html">Report Lost</a>
+            <a href="report-found.html">Report Found</a>
+             <a href="my-reports.html">My Reports</a>
+             <button type="button" onclick="logout()">Logout</button>
+        </nav>
+    </header>
+
+    <main class="dashboard">
+
+        <section class="dashboard-header">
+            <p class="tagline">Campus Pick</p>
+            <h1>Lost & Found Dashboard</h1>
+            <p>Browse recently reported items on campus.</p>
+        </section>
+
+        <section class="dashboard-controls">
+            <input
+                type="text"
+                id="search-input"
+                placeholder="Search items..."
+            >
+
+            <select id="type-filter">
+                <option value="all">All Items</option>
+                <option value="Lost">Lost Items</option>
+                <option value="Found">Found Items</option>
+            </select>
+        </section>
+
+        <section class="matches-section">
+    <h2>Possible Matches</h2>
+
+    <div id="matches-container" class="reports-grid">
+        <!-- JavaScript will insert possible matches here -->
+    </div>
+        </section>
+
+        <section>
+            <h2>Recently Reported</h2>
+
+            <div id="reports-container" class="reports-grid">
+                <!-- JavaScript will insert reports here -->
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Campus Pick</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
