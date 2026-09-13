@@ -316,7 +316,7 @@ if (registerForm) {
                 data: {
                     name: name
                 },
-                emailRedirectTo: "http://127.0.0.1:5500/login.html"
+                emailRedirectTo: `${window.location.origin}/login.html`
             }
         });
 
@@ -1277,3 +1277,28 @@ async function updateNavbar() {
 }
 
 updateNavbar();
+
+
+const reportLostHome = document.getElementById("report-lost-home");
+const reportFoundHome = document.getElementById("report-found-home");
+
+async function protectHomeReportButton(button, targetPage) {
+    if (!button) return;
+
+    button.addEventListener("click", async function (event) {
+        event.preventDefault();
+
+        const {
+            data: { user }
+        } = await supabaseClient.auth.getUser();
+
+        if (user) {
+            window.location.href = targetPage;
+        } else {
+            window.location.href = "login.html";
+        }
+    });
+}
+
+protectHomeReportButton(reportLostHome, "report-lost.html");
+protectHomeReportButton(reportFoundHome, "report-found.html");
