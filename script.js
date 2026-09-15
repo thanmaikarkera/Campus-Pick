@@ -1206,18 +1206,20 @@ async function logout() {
 }
 
 const protectedPages = [
+    "dashboard",
     "dashboard.html",
+    "my-reports",
     "my-reports.html",
+    "report-lost",
     "report-lost.html",
+    "report-found",
     "report-found.html"
 ];
 
 const currentPage = window.location.pathname.split("/").pop();
 
 async function checkAuthentication() {
-    if (!protectedPages.includes(currentPage)) {
-        return;
-    }
+    if (!protectedPages.includes(currentPage)) return;
 
     const {
         data: { user },
